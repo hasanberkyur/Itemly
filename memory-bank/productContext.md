@@ -18,6 +18,7 @@ The family stores belongings across multiple houses and needs a reliable way to 
 - Efficient item workflows: add/edit/delete without confusion.
 - Clear visibility into houses and item ownership at a glance.
 - Provide feedback (notifications/toasts) when actions succeed or fail.
+- Support intuitive filtering and search so users can quickly narrow results by owner, house, category, or keywords.
 
 ## Key User Stories
 - As any family member, I can log in with the family password to access the item catalog.
@@ -25,3 +26,5 @@ The family stores belongings across multiple houses and needs a reliable way to 
 - As a user, I can update item information when its location or details change.
 - As a user, I can remove an item when it is no longer relevant.
 - As a user, I can browse or filter items by owner, house, or category to locate belongings quickly.
+- As a user, I can search by name or description to find specific items fast.
+- As a user, I can rely on a consistent, friendly UI that matches the provided design samples.
