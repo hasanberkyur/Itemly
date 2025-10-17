@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Family Belongings Tracker</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec7813",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221810",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-10">
+<nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-primary text-white p-2 rounded-lg">
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L2 7l10 5 10-5L12 2zm0 17.5L4 15v4l8 4.5 8-4.5v-4L12 19.5zM20 11l-8 4.5L4 11V7l8 4.5L20 7v4z"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold text-gray-900 dark:text-white">Family Belongings</h1>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">My Items</a>
+<a class="text-primary font-semibold" href="#">Locations</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Profile</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC-BokFBzhQAOos0SfXPwT3FHdZuNT9ovSJ91KYxf6vzCiLR4IZigzgP-YtRU2m-cBF9Qx7jdR-SuV0G0Dsau7Xr1O-Odu8wgkIdNbvZwYgKmsd2y-hsX3z_KX80JI2uP2EJKqr2b7G9yb3hWmo_pn1humjLbjn2JH800M30ylwUX_eGgYFW-Se3cSnJAzJZ1iu0v2woDUsz7XH6lM1F1ke6WpOf-xNgdIHlafTij9OsqzXtYp24KrmOZTObRmefm5sc8MK98odLe0");'></div>
+<button class="md:hidden p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-primary/20 dark:hover:bg-primary/30">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="flex-grow container mx-auto px-6 py-12">
+<div class="max-w-4xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10">
+<div>
+<h2 class="text-4xl font-bold text-gray-900 dark:text-white tracking-tight">Locations</h2>
+<p class="mt-2 text-gray-500 dark:text-gray-400">Manage and view all your family's homes.</p>
+</div>
+<button class="mt-4 md:mt-0 flex items-center gap-2 bg-primary text-white py-2 px-4 rounded-full shadow-md hover:bg-opacity-90 transition-all duration-300">
+<span class="material-symbols-outlined text-base">add_location_alt</span>
+<span class="font-semibold">Add New Location</span>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group flex flex-col bg-white dark:bg-background-dark/50 shadow-sm rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="relative">
+<div class="w-full h-48 bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAenhf39n_lALBWrVheXN0QJP7DMeDnTjSHbWUmsjlDpqUSM-5jzZXtnPIzuR9Cv-KBPD1_iIcPX9hfaSKszWoCs2gJXvsxv7hVTPpm6GfCVRlMiWzRmG4wk91JxDTpBEMVjw1SIuPwSkQN_DoNCW38r-6vIOvIDcDsxxcxwd7_k3zWzFnAFTOK9d7onQJqOETEX1vm7twDeASVW25BaSHTzBmjsa9_QH5to5ZasINtmq1AmLmqZ8z2Ow0CWIDFmzeoFJXj42Gh3Bs");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Cozy Cottage</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">12 items</p>
+<button class="mt-auto self-start text-primary font-semibold text-sm py-1 rounded-md transition-colors duration-300 opacity-0 group-hover:opacity-100 focus:opacity-100">View Details</button>
+</div>
+</div>
+<div class="group flex flex-col bg-white dark:bg-background-dark/50 shadow-sm rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="relative">
+<div class="w-full h-48 bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAChUxujC3Kzb5y56DHsL7DJ6bMODG4vnj3fzuUTBlHVcsw80cZ0lI6pTUtkU8tU1KE7Mg4t2_M4vI202huBG9Bauz79TRYSfjS7WzGQGF9I028H7RZyssATxwc7uP-Wneaxp_DF-Q6EJBmJiMDvwpwOpozOHQMgaibPonkxQ1LM2tHNIjuJcZx1nbcLqGpXg8-_C8a3__3K14BBWGxYg-artNLqRT_0F4MGEczk7nFrW-MKsOdonWClFaxAgiTXr4HKdl1YdLHFVA");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">City Apartment</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">25 items</p>
+<button class="mt-auto self-start text-primary font-semibold text-sm py-1 rounded-md transition-colors duration-300 opacity-0 group-hover:opacity-100 focus:opacity-100">View Details</button>
+</div>
+</div>
+<div class="group flex flex-col bg-white dark:bg-background-dark/50 shadow-sm rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="relative">
+<div class="w-full h-48 bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAeOxyibKF-F0coQJOpa9GcRXly-4kYZS_XSH0al8cC9mxWufC79gKMf7Hr7CbSOvo5bNJUXNrJFiiXduzQGg4IZkHr8kGIv-IzvAmqR2gWiL1f6TO7dQu40yKG3aIZnaw1qEmDwpFE9cm6bPe1CECcc6_OvJegpfqNLDvyIWyauHLQK4UcbWo9WSIXj60vAP574So3zxtwZ-gUTg_r-IBs4pDXj7zwCtdwedE2AVbsJfkaOW3rg0dBedm3pR5S8cwv-t3O0r0xYrI");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Beach House</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">8 items</p>
+<button class="mt-auto self-start text-primary font-semibold text-sm py-1 rounded-md transition-colors duration-300 opacity-0 group-hover:opacity-100 focus:opacity-100">View Details</button>
+</div>
+</div>
+<div class="group flex flex-col bg-white dark:bg-background-dark/50 shadow-sm rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+<div class="relative">
+<div class="w-full h-48 bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCASPaNtre0zCAGPQHYhlPA8sUANjQqSBwim0oloigpLyTMYzjpV99q_wZepEkDbcVSZ_OYou15xk-FMelYAsJusdjyQfdUFxdQ7b1uZpbJXrPtRq-CN3Eqor65J6GtCsbdLI1D9mYUUCjDqP78SX30BKJ_AiurfAJ64y5jwUjkI-XWNYJjsLwQkS69JjWvflxU8_w-gX4S4zhSGuU5X-FeM7C8rRvU166zbcRaP5ZxLh-6UIEPnL6BkuRXBo7mjQC2-wtYgxSk2n0");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Mountain Cabin</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">15 items</p>
+<button class="mt-auto self-start text-primary font-semibold text-sm py-1 rounded-md transition-colors duration-300 opacity-0 group-hover:opacity-100 focus:opacity-100">View Details</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

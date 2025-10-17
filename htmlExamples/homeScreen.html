@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HomeBase Dashboard</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec7813",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221810",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#3d2c1d] dark:text-[#d3c1b3]">
+<div class="flex flex-col min-h-screen">
+<header class="bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-10">
+<div class="container mx-auto px-6 py-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<svg class="text-primary" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 2H15.3333V8.66667H8.66667V15.3333H2V22H22V2Z" fill="currentColor"></path>
+</svg>
+<h1 class="text-xl font-bold text-[#1b140d] dark:text-white">HomeBase</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium text-[#7a583e] dark:text-[#a18875] hover:text-primary dark:hover:text-primary transition-colors" href="#">My Items</a>
+<a class="text-sm font-medium text-[#7a583e] dark:text-[#a18875] hover:text-primary dark:hover:text-primary transition-colors" href="#">Locations</a>
+<a class="text-sm font-medium text-[#7a583e] dark:text-[#a18875] hover:text-primary dark:hover:text-primary transition-colors" href="#">Profile</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzCzfGcK-HG5GOO6xKEPlZAdILr5vo4wcDCF4vYTNSU2PtTtCYjkJN6mVW71LjJQLzE7fZLjQh4Y5-Xj1vQAg_lQGEfGvGHes_8hK4RZX1rlTCiT3I-RuDQvJ-A4cSqkFhZaUX9KNe_1_ya2Dd1xO--01sDEiCZDQ03CBtjTDS0mNIFfglKEZLGY4dbopTB1E31WTSweey1JfK-qfm0SLXHfrEfxYWx2SNe4M0Yl_u6dJsUFhKlSr2vJGF5L2MpldWsjjoIVxqses");'></div>
+<button class="md:hidden p-2 rounded-md hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,88H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-6 py-12">
+<div class="max-w-4xl mx-auto">
+<div class="mb-12">
+<h2 class="text-4xl font-bold tracking-tight text-[#1b140d] dark:text-white">Welcome back, Sarah</h2>
+<p class="mt-2 text-lg text-[#7a583e] dark:text-[#a18875]">Here's a summary of your belongings.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+<div class="bg-white dark:bg-background-dark/50 p-6 rounded-xl border border-black/5 dark:border-white/5">
+<p class="text-sm font-medium text-[#7a583e] dark:text-[#a18875]">Total Items</p>
+<p class="text-4xl font-bold text-primary mt-1">234</p>
+</div>
+<div class="bg-white dark:bg-background-dark/50 p-6 rounded-xl border border-black/5 dark:border-white/5">
+<p class="text-sm font-medium text-[#7a583e] dark:text-[#a18875]">Total Locations</p>
+<p class="text-4xl font-bold text-primary mt-1">3</p>
+</div>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-[#1b140d] dark:text-white mb-6">Recent Activity</h3>
+<div class="space-y-8 relative">
+<div class="absolute left-4 top-2 bottom-2 w-0.5 bg-primary/20"></div>
+<div class="flex items-start gap-6 relative">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center ring-8 ring-background-light dark:ring-background-dark">
+<svg class="text-primary" fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path></svg>
+</div>
+<div>
+<p class="font-medium text-[#1b140d] dark:text-white">Added 'Winter Coat' to 'Cabin' location</p>
+<p class="text-sm text-[#7a583e] dark:text-[#a18875] mt-1">2 days ago</p>
+</div>
+</div>
+<div class="flex items-start gap-6 relative">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center ring-8 ring-background-light dark:ring-background-dark">
+<svg class="text-primary" fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path></svg>
+</div>
+<div>
+<p class="font-medium text-[#1b140d] dark:text-white">Moved 'Laptop' from 'Apartment' to 'Office'</p>
+<p class="text-sm text-[#7a583e] dark:text-[#a18875] mt-1">1 week ago</p>
+</div>
+</div>
+<div class="flex items-start gap-6 relative">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center ring-8 ring-background-light dark:ring-background-dark">
+<svg class="text-primary" fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path></svg>
+</div>
+<div>
+<p class="font-medium text-[#1b140d] dark:text-white">Created new location 'Beach House'</p>
+<p class="text-sm text-[#7a583e] dark:text-[#a18875] mt-1">2 weeks ago</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
